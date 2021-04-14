@@ -1,0 +1,55 @@
+{
+  "name": "expressjs-boilerplate",
+  "version": "1.0.0",
+  "description": "Simple and high scalabilty structure to start Expressjs API project.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development nodemon --exec \"yarn run lintFull &&  DEBUG=express:* node index.js\"",
+    "start": "NODE_ENV=production nodemon index.js",
+    "lint": "eslint \"./**/*.js\" --quiet",
+    "lintFull": "eslint \"./**/*.js\"",
+    "lintFix": "eslint --fix './**/*.js'",
+    "test": "jest"
+  },
+  "lint-staged": {
+    "*.{js}": "yarn lint"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "collectCoverage": true,
+    "coverageReporters": [
+      "html"
+    ]
+  },
+  "author": "Syskin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://gitlab.com/Syskin/pertinent-test/issues"
+  },
+  "homepage": "https://gitlab.com/Syskin/pertinent-test#readme",
+  "dependencies": {
+    "axios": "^0.21.0",
+    "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "helmet": "^4.2.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "cross-env": "^7.0.2",
+    "eslint": "^7.12.1",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "jest": "^26.6.2",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.6",
+    "prettier": "^2.1.2",
+    "supertest": "^6.0.0"
+  }
+}

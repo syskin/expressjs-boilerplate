@@ -1,0 +1,4 @@
+{
+  "quotes": ["error", "backtick"],
+  "trailingComma": "es5"
+}
