@@ -1,6 +1,6 @@
 const User = require(`./userModel.js`)
 
-const createUser = async (info) => {
+const create = async (info) => {
   try {
     const user = new User(info)
     const newUser = await user.save(info)
@@ -10,7 +10,7 @@ const createUser = async (info) => {
   }
 }
 
-const findUsers = async (filter) => {
+const find = async (filter) => {
   try {
     const result = await User.find(filter.params)
       .sort(filter.order)
@@ -28,7 +28,7 @@ const findUsers = async (filter) => {
   }
 }
 
-const findUserById = async (id) => {
+const findById = async (id) => {
   try {
     const user = await User.findById(id)
     return new User(user)
@@ -37,7 +37,7 @@ const findUserById = async (id) => {
   }
 }
 
-const deleteUserById = async (id) => {
+const deleteById = async (id) => {
   try {
     const deletedUser = await User.findByIdAndRemove(id)
     return deletedUser
@@ -47,8 +47,8 @@ const deleteUserById = async (id) => {
 }
 
 module.exports = {
-  createUser,
-  findUsers,
-  findUserById,
-  deleteUserById,
+  create,
+  find,
+  findById,
+  deleteById,
 }

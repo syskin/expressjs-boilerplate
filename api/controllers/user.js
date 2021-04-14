@@ -1,9 +1,26 @@
 const { ErrorHandler } = require(`../services/ErrorHandler`)
-const { add, findByFilter } = require(`../services/userService`)
+const { add, findByFilter } = require(`../services/user`)
 
 const login = async (req, res, next) => {
   try {
-    res.status(200).json({ message: `Successfully logged in` })
+    if (!req.body || !req.body.email || !req.body.password)
+      return next(new ErrorHandler(422, `Missing credentials to log you in.`))
+
+    const checkExistingUser = await findByFilter({
+      params: {
+        email: req.body.email,
+        password: req.body.password,
+      },
+      limit: 1,
+    })
+
+    if (checkExistingUser && checkExistingUser.length > 0)
+      return next(new ErrorHandler(401, `Invalid credentials`))
+
+    res.status(200).json({
+      message: `Successfully logged in`,
+      token: `48-hello-52-world-84`,
+    })
   } catch (e) {
     return next(new ErrorHandler(500, e))
   }

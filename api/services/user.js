@@ -5,7 +5,7 @@ const add = async (userInformation) => {
     if (!userInformation) throw new Error(`User information missing`)
     userInformation.created = Date.now()
 
-    const user = await userRepository.add(userInformation)
+    const user = await userRepository.create(userInformation)
     if (!user) throw new Error(`User not created`)
 
     return user
@@ -27,7 +27,7 @@ const findByFilter = async (filter) => {
     if (!filter.order) filter.order = order
     if (!filter.skip) filter.skip = skip
 
-    const user = await userRepository.findByFilter(filter)
+    const user = await userRepository.find(filter)
     return user
   } catch (e) {
     throw new Error(e)

@@ -1,7 +1,7 @@
 {
   "name": "expressjs-boilerplate",
   "version": "1.0.0",
-  "description": "Simple and high scalabilty structure to start Expressjs API project from multiple datasources.",
+  "description": "Simple and high scalabilty structure to start Expressjs API project with multiple datasources.",
   "main": "index.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=development nodemon --exec \"yarn run lintFull &&  DEBUG=express:* node index.js\"",

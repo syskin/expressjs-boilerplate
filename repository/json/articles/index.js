@@ -10,7 +10,7 @@ const articles = [
     content: ``,
   },
 ]
-const findArticles = () => {
+const find = () => {
   try {
     return articles
   } catch (e) {
@@ -18,15 +18,15 @@ const findArticles = () => {
   }
 }
 
-const findOneById = () => {
+const findOneById = (id) => {
   try {
-    return articles
+    return articles.filter((article) => article.id === id)
   } catch (e) {
     throw new Error(e)
   }
 }
 
 module.exports = {
-  findArticles,
+  find,
   findOneById,
 }
