@@ -1,7 +1,7 @@
 {
   "name": "expressjs-boilerplate",
   "version": "1.0.0",
-  "description": "Simple and high scalabilty structure to start Expressjs API project.",
+  "description": "Simple and high scalabilty structure to start Expressjs API project from multiple datasources.",
   "main": "index.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=development nodemon --exec \"yarn run lintFull &&  DEBUG=express:* node index.js\"",
@@ -27,16 +27,17 @@
   "author": "Syskin",
   "license": "MIT",
   "bugs": {
-    "url": "https://gitlab.com/Syskin/pertinent-test/issues"
+    "url": "https://github.com/syskin/expressjs-boilerplate/issues"
   },
-  "homepage": "https://gitlab.com/Syskin/pertinent-test#readme",
+  "homepage": "https://github.com/syskin/expressjs-boilerplate#readme",
   "dependencies": {
     "axios": "^0.21.0",
     "body-parser": "^1.19.0",
     "compression": "^1.7.4",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "helmet": "^4.2.0"
+    "helmet": "^4.2.0",
+    "mongoose": "^5.12.3"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",

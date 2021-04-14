@@ -1,6 +1,6 @@
-const login = require(`./login.js`);
+const userRoutes = require(`./user`)
 
 module.exports = (router) => {
-  login(router);
-  return router;
-};
+  userRoutes(router)
+  return router
+}

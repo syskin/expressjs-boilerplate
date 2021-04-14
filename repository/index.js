@@ -1,6 +1,6 @@
-const mongdb = require(`./mongodb`);
-const json = require(`./json`);
+const articles = require(`./json/articles`)
+const users = require(`./mongodb/users`)
 module.exports = {
-  mongdb,
-  json,
-};
+  articles,
+  users,
+}
