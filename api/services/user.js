@@ -27,8 +27,8 @@ const findByFilter = async (filter) => {
     if (!filter.order) filter.order = order
     if (!filter.skip) filter.skip = skip
 
-    const user = await userRepository.find(filter)
-    return user
+    const users = await userRepository.find(filter)
+    return users
   } catch (e) {
     throw new Error(e)
   }

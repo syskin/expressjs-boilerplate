@@ -6,6 +6,8 @@ const login = async (req, res, next) => {
     if (!req.body || !req.body.email || !req.body.password)
       return next(new ErrorHandler(422, `Missing credentials to log you in.`))
 
+    // You should encrypt the password sent in the body to check if it matches with the one stored in the database.
+
     const checkExistingUser = await findByFilter({
       params: {
         email: req.body.email,
@@ -14,7 +16,7 @@ const login = async (req, res, next) => {
       limit: 1,
     })
 
-    if (checkExistingUser && checkExistingUser.length > 0)
+    if (!checkExistingUser && checkExistingUser.length === 0)
       return next(new ErrorHandler(401, `Invalid credentials`))
 
     res.status(200).json({
@@ -47,6 +49,8 @@ const register = async (req, res, next) => {
 
     if (checkExistingUser && checkExistingUser.length > 0)
       return next(new ErrorHandler(409, `This email is already used.`))
+
+    // You should encrypt the password before persiting it into the database
 
     await add(req.body)
 
