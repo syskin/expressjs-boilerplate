@@ -10,8 +10,8 @@
     "lintFull": "eslint \"./**/*.js\"",
     "lintFix": "eslint --fix './**/*.js'",
     "test": "jest --detectOpenHandles --force-exit",
-    "test:coverage": "yarn test --coverage",
-    "coverage": "cat ./tests/units/coverage/lcov.info | coveralls"
+    "test:coverage": "npm run test --coverage",
+    "test:badges": "npm run test:coverage  && jest-coverage-badges"
   },
   "lint-staged": {
     "*.{js}": "yarn lint"
@@ -47,7 +47,6 @@
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
-    "coveralls": "^3.1.0",
     "cross-env": "^7.0.2",
     "eslint": "^7.12.1",
     "eslint-config-airbnb-base": "^14.2.0",
