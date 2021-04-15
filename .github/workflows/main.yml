@@ -20,8 +20,10 @@ jobs:
         node-version: '14.x'
     - name: NPM Install
       run: npm install
+    - name: Codecov Install
+      run: npm install -g codecov
     - name: Lint
       run: npm run lint
     - name: Test
-      run: npm run test:coverage
+      run: npm run test:codecov
       
