@@ -13,9 +13,10 @@ This simple ExpressJS boilerplate structure with multiple datasources in ES5.
 ## Getting started
 1. Install packages:   
 `yarn install`
-2. Run project in dev mode:   
+2. Copy paste `.env-example` to `.env` and set up vars
+3. Run project in dev mode:   
 `yarn dev`
-3. Run ESLint with Prettier for static analysis and applying consistent code formatting:   
+4. Run ESLint with Prettier for static analysis and applying consistent code formatting:   
 `yarn lint`
 
 ## Included in the boilerplate
