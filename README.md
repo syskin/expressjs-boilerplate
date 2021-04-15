@@ -26,3 +26,15 @@ This simple ExpressJS boilerplate structure with multiple datasources in ES5.
 - Env vars config
 - Linting
 - Error handler
+
+## Boilerplate structure
+
+- api
+  - routes (Declare all endpoints of your API and call associate controller)
+  - controller (Control the data in and out of an endpoint and call needed services)
+  - middleware (Declare your middleware in this folder, usefull to execute some kind of code before calling a controller)
+  - services (Call functions, repository or dependencies to execute specific job)
+- config (Folder of differents config file of your API project)
+- repository (Declare your datasources and associated models to return data through services)
+- tests (Tests folder)
+- index.js (Main entry of expressJS server)
