@@ -29,8 +29,8 @@ This simple ExpressJS boilerplate structure with multiple datasources in ES5.
 
 ## Boilerplate structure
 
-- api
-  - routes (Declare all endpoints of your API and call associate controller)
+- api (All relatives folder and file for the API)
+  - routes (Declare all endpoints of your API and call middleware, associate controller)
   - controller (Control the data in and out of an endpoint and call needed services)
   - middleware (Declare your middleware in this folder, usefull to execute some kind of code before calling a controller)
   - services (Call functions, repository or dependencies to execute specific job)
