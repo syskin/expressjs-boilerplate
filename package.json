@@ -11,7 +11,7 @@
     "lint:fix": "eslint --fix './**/*.js'",
     "test": "jest --detectOpenHandles --force-exit",
     "test:coverage": "npm run test --coverage",
-    "test:badges": "npm run test:coverage  && jest-coverage-badges"
+    "test:codecov": "npm run test:coverage  && codecov"
   },
   "lint-staged": {
     "*.{js}": "yarn lint"
