@@ -4,7 +4,7 @@
 [![GitHub version](https://img.shields.io/badge/version-v1.0.0-blue.svg)](https://github.com/syskin/expressjs-boilerplate)
 [![Sync Vulnerabilities Status](https://app.snyk.io/test/github/syskin/expressjs-boilerplate/badge.svg)](https://snyk.io/test/github/syskin/expressjs-boilerplate)
 
-This simple ExpressJS boilerplate structure with multiple datasources in ES5.
+ExpressJS boilerplate structure with multiple datasources (Mongodb and static json used for demonstration) in ES5.
 
 ## Requirements
 1. Node.js >= 10
