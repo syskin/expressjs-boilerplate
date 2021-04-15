@@ -9,7 +9,9 @@
     "lint": "eslint \"./**/*.js\" --quiet",
     "lintFull": "eslint \"./**/*.js\"",
     "lintFix": "eslint --fix './**/*.js'",
-    "test": "jest --detectOpenHandles --force-exit"
+    "test": "jest --detectOpenHandles --force-exit",
+    "test:coverage": "yarn test --coverage",
+    "coverage": "cat ./tests/units/coverage/lcov.info | coveralls"
   },
   "lint-staged": {
     "*.{js}": "yarn lint"
@@ -23,7 +25,10 @@
     ],
     "collectCoverage": true,
     "coverageReporters": [
-      "html"
+      "html",
+      "json-summary",
+      "text",
+      "lcov"
     ]
   },
   "author": "Syskin",
@@ -42,6 +47,7 @@
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
+    "coveralls": "^3.1.0",
     "cross-env": "^7.0.2",
     "eslint": "^7.12.1",
     "eslint-config-airbnb-base": "^14.2.0",
