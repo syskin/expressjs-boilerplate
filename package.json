@@ -10,7 +10,7 @@
     "lintFull": "eslint \"./**/*.js\"",
     "lint:fix": "eslint --fix './**/*.js'",
     "test": "jest --detectOpenHandles --force-exit",
-    "test:coverage": "npm run test --coverage",
+    "test:coverage": "jest --detectOpenHandles --force-exit --coverage",
     "test:codecov": "npm run test:coverage  && codecov"
   },
   "lint-staged": {
