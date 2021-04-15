@@ -1,7 +1,7 @@
 # ExpressJS Boilerplate
 
 ![ci badge](https://github.com/syskin/expressjs-boilerplate/workflows/CI/badge.svg)
-[![Coverage Status](https://coveralls.io/repos/github/syskin/expressjs-boilerplate/badge.svg?branch=master)](https://coveralls.io/github/syskin/expressjs-boilerplate?branch=master&kill_cache=1)
+[![codecov](https://codecov.io/gh/syskin/expressjs-boilerplate/branch/master/graph/badge.svg?token=720QPKY5L6)](https://codecov.io/gh/syskin/expressjs-boilerplate)
 [![GitHub version](https://img.shields.io/badge/version-v1.0.0-blue.svg)](https://github.com/syskin/expressjs-boilerplate)
 [![Sync Vulnerabilities Status](https://app.snyk.io/test/github/syskin/expressjs-boilerplate/badge.svg)](https://snyk.io/test/github/syskin/expressjs-boilerplate)
 
