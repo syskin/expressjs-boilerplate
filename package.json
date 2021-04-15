@@ -9,15 +9,17 @@
     "lint": "eslint \"./**/*.js\" --quiet",
     "lintFull": "eslint \"./**/*.js\"",
     "lintFix": "eslint --fix './**/*.js'",
-    "test": "jest"
+    "test": "jest --detectOpenHandles --force-exit"
   },
   "lint-staged": {
     "*.{js}": "yarn lint"
   },
   "jest": {
+    "coverageDirectory": "./tests/units/coverage/",
     "testEnvironment": "node",
     "coveragePathIgnorePatterns": [
-      "/node_modules/"
+      "/node_modules/",
+      "/tests"
     ],
     "collectCoverage": true,
     "coverageReporters": [
@@ -31,7 +33,6 @@
   },
   "homepage": "https://github.com/syskin/expressjs-boilerplate#readme",
   "dependencies": {
-    "axios": "^0.21.0",
     "body-parser": "^1.19.0",
     "compression": "^1.7.4",
     "dotenv": "^8.2.0",
@@ -48,9 +49,10 @@
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-prettier": "^3.1.4",
     "jest": "^26.6.2",
+    "mongo-mock": "^4.0.0",
+    "mongodb-memory-server": "^6.9.6",
     "morgan": "^1.10.0",
     "nodemon": "^2.0.6",
-    "prettier": "^2.1.2",
-    "supertest": "^6.0.0"
+    "prettier": "^2.1.2"
   }
 }

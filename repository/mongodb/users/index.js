@@ -6,7 +6,7 @@ const create = async (info) => {
     const newUser = await user.save(info)
     return newUser
   } catch (e) {
-    throw new Error(e)
+    return new Error(e)
   }
 }
 
@@ -20,7 +20,7 @@ const find = async (filter) => {
 
     return users
   } catch (e) {
-    throw new Error(e)
+    return new Error(e)
   }
 }
 
