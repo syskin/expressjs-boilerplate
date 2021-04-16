@@ -18,10 +18,18 @@ describe(`Error handler middleware tests`, () => {
   const scenarios = [
     {
       description: `Internal serv error`,
-      error: {message: `Missing something`},
+      error: { message: `Missing something` },
       envResponse: {
-        development: {"message": "Missing something", "status": "error", "statusCode": 500},
-        production: {"message": "Something wrong happened", "status": "error", "statusCode": 500},
+        development: {
+          message: `Missing something`,
+          status: `error`,
+          statusCode: 500,
+        },
+        production: {
+          message: `Something wrong happened`,
+          status: `error`,
+          statusCode: 500,
+        },
       },
       status: 500,
     },
@@ -29,8 +37,12 @@ describe(`Error handler middleware tests`, () => {
       description: `Internal serv error`,
       error: {},
       envResponse: {
-        development: {"message": "", "status": "error", "statusCode": 500},
-        production: {"message": "Something wrong happened", "status": "error", "statusCode": 500},
+        development: { message: ``, status: `error`, statusCode: 500 },
+        production: {
+          message: `Something wrong happened`,
+          status: `error`,
+          statusCode: 500,
+        },
       },
       status: 500,
     },
@@ -41,8 +53,16 @@ describe(`Error handler middleware tests`, () => {
         message: `Unauthorized`,
       },
       envResponse: {
-        development: {"message": "Unauthorized", "status": "error", "statusCode": 401},
-        production: {"message": "Unauthorized", "status": "error", "statusCode": 401},
+        development: {
+          message: `Unauthorized`,
+          status: `error`,
+          statusCode: 401,
+        },
+        production: {
+          message: `Unauthorized`,
+          status: `error`,
+          statusCode: 401,
+        },
       },
       status: 401,
     },
