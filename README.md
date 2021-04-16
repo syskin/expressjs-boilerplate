@@ -13,12 +13,12 @@ ExpressJS boilerplate structure with multiple datasources (Mongodb and static js
 
 ## Getting started
 1. Install packages:   
-`yarn install`
+`npm install`
 2. Copy paste `.env-example` to `.env` and set up vars
 3. Run project in dev mode:   
-`yarn dev`
+`npm run dev`
 4. Run ESLint with Prettier for static analysis and applying consistent code formatting:   
-`yarn lint`
+`npm run lint`
 
 ## Included in the boilerplate
 - Development & production environments

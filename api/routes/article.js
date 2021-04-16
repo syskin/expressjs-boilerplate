@@ -3,6 +3,6 @@ const prefixSingle = `article`
 const prefixMany = `articles`
 
 module.exports = (router) => {
-  router.route(`/${prefixSingle}/:id`).get(readOne)
+  router.route(`/${prefixSingle}/:id?`).get(readOne)
   router.route(`/${prefixMany}`).get(checkArticles)
 }

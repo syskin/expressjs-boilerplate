@@ -2,7 +2,7 @@ const app = require(`./config/express`)
 const configVars = require(`./config/environments`)
 const mongoose = require(`mongoose`)
 const mongodb = require(`./config/datasources/mongoose.js`)
-const env = configVars[process.env.NODE_ENV]
+const env = configVars[process.env.NODE_ENV || `development`]
 
 mongoose.connect(mongodb.uri, mongodb.options)
 

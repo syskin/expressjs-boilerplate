@@ -16,7 +16,7 @@ const login = async (req, res, next) => {
       limit: 1,
     })
 
-    if (!checkExistingUser && checkExistingUser.length === 0)
+    if (!checkExistingUser || checkExistingUser.length === 0)
       return next(new ErrorHandler(401, `Invalid credentials`))
 
     res.status(200).json({
